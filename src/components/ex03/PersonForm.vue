@@ -19,9 +19,8 @@
       <b-field>
         <b-checkbox v-model="person.isActive">Active</b-checkbox>
       </b-field>
-      <b-field>
-        <b-button @click="savePerson" type="is-primary">Save</b-button>
-      </b-field>
+      <b-button @click="savePerson" type="is-primary">Save</b-button>
+      <b-button @click="getPeople" type="is-primary">Refresh</b-button>
     </b-field>
   </div>
 </template>
@@ -45,6 +44,9 @@ export default {
         lastName: this.person.lastName,
         isActive: this.person.isActive,
       });
+    },
+     getPeople() {
+      this.$store.dispatch("people/getPeople");
     }
   }
 };

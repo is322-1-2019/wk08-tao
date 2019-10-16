@@ -1,7 +1,9 @@
 <template>
   <div class="card-content">
     <b-field label="แสดงรายชื่อทั้งหมด" v-if="people.length">
-      <b-table :data="people" :columns="columns"></b-table>
+       <b-table @dblclick="deletePerson" :data="people" :columns="columns"
+        :selected.sync="selected"
+        focusable></b-table>
     </b-field>
   </div>
 </template>
@@ -9,8 +11,14 @@
 import { mapState } from "vuex";
 
 export default {
+
+  created() {
+    this.$store.dispatch("people/getPeople");
+  },
+  
   data() {
     return {
+       selected: {},
       columns: [
         { field: "title", label: "คำนำหน้า" },
         { field: "firstName", label: "ชื่อ" },
@@ -21,6 +29,14 @@ export default {
   },
   computed: {
     ...mapState("people", ["people"])
+  },
+
+   methods: {
+    deletePerson() {
+      this.$store.dispatch("people/deletePerson", this.selected );
+    }
   }
+
+
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ex01-page></ex01-page>
-    <ex02-page></ex02-page>
-    <ex03-page></ex03-page>
+    <ex01-page v-show="false"></ex01-page>
+    <ex02-page v-show="false"></ex02-page>
+    <ex03-page v-show="true"></ex03-page>
   </div>
 </template>
 
