@@ -1,5 +1,6 @@
 <template>
   <div class="card-content">
+    <nav-bar></nav-bar>
     <name-section
       class="card"
       v-model="fullName">
@@ -9,10 +10,12 @@
 </template>
 <script>
 import NameSection from './NameSection.vue';
+import NavBar from "../NavBar.vue";
 
 export default {
   components: {
     NameSection,
+    NavBar
   },
   data() {
     return {

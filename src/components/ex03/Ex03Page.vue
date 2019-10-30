@@ -5,16 +5,19 @@
     <active-people-list class="card"></active-people-list>
   </div>
 </template>
+
 <script>
 import PersonForm from "./PersonForm.vue";
 import PeopleList from "./PeopleList.vue";
 import ActivePeopleList from "./ActivePeopleList.vue";
+import NavBar from "../NavBar.vue";
 
 export default {
   components: {
     PersonForm,
     PeopleList,
-    ActivePeopleList
+    ActivePeopleList,
+    NavBar
   }
 }
 </script>

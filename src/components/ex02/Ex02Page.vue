@@ -7,11 +7,13 @@
 <script>
 import DisplaySection from './DisplaySection.vue';
 import NumberInputSection from './NumberInputSection.vue';
+import NavBar from "../NavBar.vue";
 
 export default {
   components: {
     DisplaySection,
     NumberInputSection,
+    NavBar
   }
 }
 </script>
