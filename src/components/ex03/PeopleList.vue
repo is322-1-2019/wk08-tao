@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="card-content">
     <b-field label="แสดงรายชื่อทั้งหมด" v-if="people.length">
        <b-table @dblclick="deletePerson" :data="people" :columns="columns"

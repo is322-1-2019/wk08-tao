@@ -4,13 +4,15 @@ import VueRouter from "vue-router";
 import Ex01Page from "../components/ex01/Ex01Page.vue";
 import Ex02Page from "../components/ex02/Ex02Page.vue";
 import Ex03Page from "../components/ex03/Ex03Page.vue";
+import LoginPage from "../components/LoginPage.vue";
+
 
 Vue.use(VueRouter);
 
 const routeList = [
   {
     path: "/",
-    redirect: "/ex01",
+    component: LoginPage,
   },
   {
     path: "/ex01",
