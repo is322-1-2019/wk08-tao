@@ -1,5 +1,6 @@
 <template>
   <div class="card-content">
+    <nav-bar></nav-bar>
     <person-form class="card"></person-form>
     <people-list class="card"></people-list>
     <active-people-list class="card"></active-people-list>

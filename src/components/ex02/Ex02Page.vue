@@ -1,5 +1,6 @@
 <template>
   <div class="card-content">
+    <nav-bar></nav-bar>
     <display-section class="card"></display-section>
     <number-input-section class="card"></number-input-section>
   </div>
