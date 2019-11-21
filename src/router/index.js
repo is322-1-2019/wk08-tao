@@ -8,8 +8,7 @@ import Ex02Page from "../components/ex02/Ex02Page.vue";
 import Ex03Page from "../components/ex03/Ex03Page.vue";
 import LoginPage from "../components/LoginPage.vue";
 
-// import firebase from "firebase/app";
-// import "firebase/auth";
+
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -37,16 +36,6 @@ const routeList = [
 export const router = new VueRouter({
   routes: routeList,
 });
-
-// router.beforeEach((to, from, next) => {
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     if (!user) {
-//       next("/");
-//     }
-//   });
-
-//   next();
-// });
 
 
 router.beforeEach((to, from, next) => {
